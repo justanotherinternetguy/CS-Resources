@@ -3,7 +3,7 @@ import java.io.*;
 import java.lang.*;
 import java.lang.Math.*;
 
-public class Main {
+public class NearlyLuckyNumber {
     public static void main (String[] args) {
         Scanner sc = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
         long n = sc.nextLong();
