@@ -1,7 +1,10 @@
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
-import java.lang.Math.*;
-import java.lang.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
 public class YoungPhysicist {
 	public static void main (String[] args) {
