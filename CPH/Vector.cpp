@@ -18,7 +18,8 @@ using namespace std;
 typedef vector<int> VI;
 
 int main() {
-	VI vec = {3, 2, 5, 8};
+	VI vec;
+	vec = {3, 2, 5, 8};
 	vec.PB(1);
 
 	cout << vec.back() << "\n";
