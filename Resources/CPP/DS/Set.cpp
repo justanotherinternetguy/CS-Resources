@@ -4,12 +4,6 @@ using namespace std;
 
 // DS
 
-void printOut(vector<int> v) {
-    for (auto i : v) {
-        cout << i;    
-    }
-}
-
 int main() {
     // set - collection of elements, insertion, search, rm 
     // O(log n)
