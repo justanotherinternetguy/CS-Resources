@@ -35,8 +35,14 @@ int main() {
     it = s.end(); it--; // largest item in set
     cout << *it << "\n";
     
-    it = s.find(5); // iter pointing to x, if x is not found, point to END
+    it = s.find(10); // iter pointing to x, if x is not found, point to END
     cout << *it << "\n";
+
+    if (it == s.end()) {
+        cout << "not found" << "\n";
+    }
+
+    cout << "----------------------------" << "\n";
     
     return 0;
 }
