@@ -5,7 +5,7 @@ public:
         
         for (int i = 0; i < len; i++) {
             for (int j = i+1; j < len; j++) {
-                if (nums[j] == target-nums[i]) {
+                if (nums[j] + nums[i] == target) {
                     return {i, j};
                 }
             }
