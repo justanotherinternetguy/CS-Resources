@@ -4,6 +4,12 @@ using namespace std;
 
 // DS
 
+void printOut(vector<int> v) {
+    for (auto i : v) {
+        cout << i;    
+    }
+}
+
 int main() {
     // vector - dynamic array
     vector<int> v;
@@ -13,23 +19,17 @@ int main() {
     v.push_back(8);
     cout << v.back() << "\n";
     
-    for (auto i : v) {
-        cout << i;
-    }
+    printOut(v);
     cout << "\n";
     
     v.pop_back();
     
-    for (auto i : v) {
-        cout << i;
-    }
+    printOut(v);
     cout << "\n";
     
     sort(v.begin(), v.end());
     
-    for (auto i : v) {
-        cout << i;
-    }
+    printOut(v);
     cout << "\n";
     
     return 0;
