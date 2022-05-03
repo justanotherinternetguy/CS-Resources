@@ -1,3 +1,17 @@
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+// THIS CODE DOES NOT WORK
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,6 +29,20 @@ int main() {
     for (int i = 0; i < rounds; i++) {
         string s;
         cin>>s;
-        
+        int index = 0;
+
+        for (int i = 0; i < 26; i++) {
+            if (s[0] == ch[i]) {
+                index = i * 25;
+            }
+        }
+
+
+        for (int j = 0; j < 25; j++) {
+            if (s[1] == ch[j]) {
+                index += j+1;
+            }
+        }
+        cout << index << "\n";
     }
 }
