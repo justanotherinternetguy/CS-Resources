@@ -21,5 +21,22 @@ int main() {
 
     int rounds;
     cin >> rounds;
+    
+
+    // 1 ab --> 650 zy
+
+    for (int i = 0; i < rounds; i++) {
+        string s;
+        cin >> s;
+        int res = 0;
+
+        // (int) - 96
+        res += ((int) s[0] - 96);
+        res += ((int) s[1] - 98);
+
+        cout << res << "\n";
+
+
+    }
 	return 0;
 }
