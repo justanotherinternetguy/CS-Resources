@@ -27,6 +27,9 @@ int main() {
     else {
         cout << "no" << "\n";
     }
+
+    int num = 1775;
+    cout << int(log10(num) + 1) << "\n"; // # of digits in a numer
     
     return 0;
 }
