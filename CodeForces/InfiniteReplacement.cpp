@@ -63,8 +63,11 @@ int main() {
     int rounds;
     SCI(rounds);
 
-    FOR (i, 0, rounds) {
-        WI(i<<1);
+    FOR (i, 1, rounds) {
+        string s;
+        SCS(s);
+
+        WS(s);
     }
 
 	return 0;
