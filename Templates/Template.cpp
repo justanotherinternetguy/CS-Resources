@@ -44,6 +44,7 @@ typedef unsigned long long int  uint64;
 
 
 #define FOR(i,a,b) for (int i = a; i <= b; i++)
+#define FLP(i,a,b) for (int i = a; i < b; i++)
 
 
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
