@@ -57,23 +57,35 @@ int rng(int lim) {
 
 /*******************************************************************************/
 
-void solve(int s) {
-    cout << s << "\n";
+// GENERATE ALL SUBSETS - RECURSIVE SEARCH
+
+void search(int *arr, int n)
+{
+    int snum = 0;
+    
+    while (snum < pow(2, n)) {
+        for (int i = 0; i < n; i++) {
+            
+            if ((snum & (1 << i)) != 0) {
+                cout << arr[i] << " ";
+            }
+            
+        }
+        BR();
+        ++snum;
+    }
 }
 
-int main() {
+
+
+int main()
+{
     ios_base::sync_with_stdio(0), cin.tie(NULL), cout.tie(NULL);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-
-    int rounds;
-    SCI(rounds);
-
-    FOR (i, 1, rounds) {
-        string s;
-        SCS(s);
-
-        WS(s);
-    }
+    
+    int arr[] = {1, 2, 3};
+    int n = 3;
+    search(arr, n);
 
 	return 0;
 }

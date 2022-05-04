@@ -31,11 +31,10 @@ typedef unsigned long long int  uint64;
 
 
 #define WI(x); printf("%d\n", x)
-#define WS(x); cout << x << "\n"
+#define WS(x); cout << x << "\n";
 #define WL(x); printf("%ld\n", x)
 #define WF(x); printf("%f\n", x)
 #define WC(x); printf("%c\n", x)
-#define BR(); cout << "\n"
 
 #define SCI(t) scanf("%d", &t)
 #define SCF(t) scanf("%f", &t)
@@ -57,22 +56,35 @@ int rng(int lim) {
 
 /*******************************************************************************/
 
-void solve(int s) {
-    cout << s << "\n";
-}
+// GENERATE ALL SUBSETS - RECURSIVE SEARCH
 
-int main() {
+
+
+int main() 
+{
     ios_base::sync_with_stdio(0), cin.tie(NULL), cout.tie(NULL);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-
-    int rounds;
-    SCI(rounds);
-
-    FOR (i, 1, rounds) {
-        string s;
-        SCS(s);
-
-        WS(s);
+    
+    vvi subset
+    {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    
+    FLP(i, 0, subset.size())
+    {
+        FLP(j, 0, subset[i].size())
+        {
+            WI(subset[i][j]);
+        }
+    }
+    
+    
+    for (vector<int> vect1D : subset) {
+        for (int x : vect1D) {
+            WI(x);    
+        }    
     }
 
 	return 0;
