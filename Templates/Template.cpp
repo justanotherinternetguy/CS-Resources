@@ -1,3 +1,4 @@
+/*******************************************************************************/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -30,10 +31,11 @@ typedef unsigned long long int  uint64;
 
 
 #define WI(x); printf("%d\n", x)
-#define WS(x); cout << x << "\n";
+#define WS(x); cout << x << "\n"
 #define WL(x); printf("%ld\n", x)
 #define WF(x); printf("%f\n", x)
 #define WC(x); printf("%c\n", x)
+#define BR(); cout << "\n"
 
 #define SCI(t) scanf("%d", &t)
 #define SCF(t) scanf("%f", &t)
@@ -52,6 +54,8 @@ int rng(int lim) {
     uniform_int_distribution<int> uid(0,lim-1);
     return uid(rang);
 }
+
+/*******************************************************************************/
 
 void solve(int s) {
     cout << s << "\n";
