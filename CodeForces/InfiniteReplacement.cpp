@@ -63,11 +63,19 @@ int main() {
     int rounds;
     SCI(rounds);
 
-    FOR (i, 1, rounds) {
-        string s;
-        SCS(s);
+    string s;
+    string t;
 
-        WS(s);
+    FOR (i, 1, rounds) {
+        SCS(s);
+        SCS(t);
+
+        if (t.size() > s.size()) {
+            WI(-1);
+        }
+        
+
+
     }
 
 	return 0;
