@@ -58,15 +58,47 @@ int rng(int lim) {
 /*******************************************************************************/
 
 void partOne(vs v) {
-    for (auto i : v) {
-        cout << i << "\n";
+    int h = 0; // horizontal
+    int d = 0; // depth
+
+    FLP (i, 0, v.size()-1) {
+        if (v[i][0] == 'f') {
+            h += (int) v[i].back() - 48;
+        }
+
+        if (v[i][0] == 'd') {
+            d += (int) v[i].back() - 48;
+        }
+
+        if (v[i][0] == 'u') {
+            d -= (int) v[i].back() - 48;
+        }
     }
+
+    WI(h*d);
 }
 
 void partTwo(vs v) {
+    int aim = 0;
+    int d = 0;
+    int h = 0;
 
+    FLP (i, 0, v.size()-1) {
+        if (v[i][0] == 'f') {
+            h += (int) v[i].back() - 48;
+            d += ((int) v[i].back() - 48) * aim;
+        }
+
+        if (v[i][0] == 'd') {
+            aim += (int) v[i].back() - 48;
+        }
+
+        if (v[i][0] == 'u') {
+            aim -= (int) v[i].back() - 48;
+    }
+    }
+    WI(h*d);
 }
-
 int main() {
     ios_base::sync_with_stdio(0), cin.tie(NULL), cout.tie(NULL);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
@@ -77,11 +109,10 @@ int main() {
     f.open("in.txt");
     
     // read from file
-    while(f.good()) {
-        f >> temp;
+    while (f) {
+        getline(f, temp);
         v.PB(temp);
     }
-
     partOne(v);
     partTwo(v);
 
