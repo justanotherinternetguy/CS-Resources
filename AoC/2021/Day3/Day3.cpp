@@ -1,3 +1,4 @@
+/*******************************************************************************/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -30,10 +31,11 @@ typedef unsigned long long int  uint64;
 
 
 #define WI(x); printf("%d\n", x)
-#define WS(x); cout << x << "\n";
+#define WS(x); cout << x << "\n"
 #define WL(x); printf("%ld\n", x)
 #define WF(x); printf("%f\n", x)
 #define WC(x); printf("%c\n", x)
+#define BR(); cout << "\n"
 
 #define SCI(t) scanf("%d", &t)
 #define SCF(t) scanf("%f", &t)
@@ -44,6 +46,7 @@ typedef unsigned long long int  uint64;
 
 
 #define FOR(i,a,b) for (int i = a; i <= b; i++)
+#define FLP(i,a,b) for (int i = a; i < b; i++)
 
 
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
@@ -52,31 +55,34 @@ int rng(int lim) {
     return uid(rang);
 }
 
-void solve(int s) {
-    cout << s << "\n";
+/*******************************************************************************/
+
+void partOne(vs v) {
+    for (auto i : v) {
+        cout << i << "\n";
+    }    
 }
 
+void partTwo(vs v) {
+}
 int main() {
     ios_base::sync_with_stdio(0), cin.tie(NULL), cout.tie(NULL);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-    int rounds;
-    SCI(rounds);
+    vs v; string temp;
 
-    string s;
-    string t;
-
-    FOR (i, 1, rounds) {
-        SCS(s);
-        SCS(t);
-
-        if (t.size() > s.size()) {
-            WI(-1);
-        }
-        
-
-
+    ifstream f;
+    f.open("in.txt");
+    
+    // read from file
+    while (f) {
+        getline(f, temp);
+        v.PB(temp);
     }
+    partOne(v);
+    partTwo(v);
 
+
+    f.close();
 	return 0;
 }
