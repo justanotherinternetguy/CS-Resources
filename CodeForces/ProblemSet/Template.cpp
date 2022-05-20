@@ -72,10 +72,7 @@ int main() {
     SCI(rounds);
 
     FOR (i, 1, rounds) {
-        string s;
-        SCS(s);
-
-        WS(s);
+        
     }
 
 	return 0;
