@@ -60,20 +60,24 @@ int rng(int lim) {
 
 /*******************************************************************************/
 
-void solve(int s) {
-    cout << s << "\n";
+void solve(int n) {
+    for (int i = n + 1;; i++) {
+        string s = to_string(i);
+        set<int> uniDigits(s.begin(), s.end());
+        if (s.size() == uniDigits.size()) {
+            cout << i;
+            break;
+        }
+    }
 }
-
 int main() {
     ios_base::sync_with_stdio(0), cin.tie(nullptr), cout.tie(nullptr);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-    int rounds;
-    SCI(rounds);
+    int n;
+    SCI(n);
+    solve(n);
 
-    FOR (i, 1, rounds) {
-        
-    }
 
 	return 0;
 }
