@@ -28,7 +28,6 @@ class Solution{
             str.append(extraChars.substring(0, 7-str.length()));
         return str.toString();
     }
-
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int tc = sc.nextInt();
