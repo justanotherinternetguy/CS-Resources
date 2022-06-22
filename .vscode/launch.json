@@ -9,11 +9,11 @@
         ""
       ],
       "stopAtEntry": true,
-      "cwd": "/Users/igmp/Documents/GitHub/Competitive-Programming-Solutions/Resources/CPP/DS",
+      "cwd": "/Users/imgp/Documents/GitHub/CS-Resources",
       "environment": [],
-      "program": "/Users/igmp/Documents/GitHub/Competitive-Programming-Solutions/Resources/CPP/DS/build/Debug/outDebug",
+      "program": "/Users/imgp/Documents/GitHub/CS-Resources/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
+      "MIMode": "lldb",
       "externalConsole": true
     }
   ]

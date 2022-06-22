@@ -5,7 +5,6 @@
 using namespace __gnu_pbds;
 using namespace std;
 
-
 typedef long long ll;
 
 #define F first
@@ -27,37 +26,31 @@ typedef unsigned long int uint32;
 typedef long long int int64;
 typedef unsigned long long int uint64;
 
-
 #define INF (int)1e9
 #define EPS 1e-9
 #define PI 3.1415926535897932384626433832795
 #define MOD 1000000007
-#define FOR(i,a,b) for (int i = a; i <= b; i++)
-#define FLP(i,a,b) for (int i = a; i < b; i++)
+#define FOR(i, a, b) for (int i = a; i <= b; i++)
+#define FLP(i, a, b) for (int i = a; i < b; i++)
 
-
-
-mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
+mt19937_64
+    rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 int rng(int lim) {
-  uniform_int_distribution<int> uid(0,lim-1);
-	return uid(rang);
+  uniform_int_distribution<int> uid(0, lim - 1);
+  return uid(rang);
 }
-
-
-
-
 
 int main(void) {
   ios_base::sync_with_stdio(0), cin.tie(nullptr), cout.tie(nullptr);
 
   int rooms;
-  cin>>rooms;
+  cin >> rooms;
   int res = 0;
-  
+
   FLP(i, 0, rooms) {
     int p, q;
     cin >> p >> q;
-    if (p+2 <= q) {
+    if (p + 2 <= q) {
       res++;
     }
   }
