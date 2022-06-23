@@ -3,7 +3,6 @@ import java.util.*;
 import java.lang.*;
 import java.lang.Math.*;
 
-
 public class BeautifulMatrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
@@ -26,7 +25,7 @@ public class BeautifulMatrix {
         if (coords[0] == 3 && coords[1] == 3){
             System.out.println(0);
         }
-            
+
         else {
             res += Math.abs(coords[0] - 3);
             res += Math.abs(coords[1] - 3);
