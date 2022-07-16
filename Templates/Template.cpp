@@ -32,7 +32,6 @@ typedef unsigned long long int  uint64;
 #define MOD 1000000007
 
 
-
 #define WI(x); printf("%d\n", x)
 #define WS(x); cout << x << "\n"
 #define WL(x); printf("%ld\n", x)

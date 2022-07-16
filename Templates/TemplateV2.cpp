@@ -33,29 +33,5 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  // Assume full = 100 mL
-
-  int n;
-  int temp;
-  cin >> n;
-  double res;
-
-  vector<int> drinks;
-  // intake
-  for (int i = 0; i < n; i++) {
-    cin >> temp;
-    drinks.PB(temp);
-  }
-
-  int overall = (drinks.size()) * 100;
-  int juiceP = 0;
-
-  for (int b = 0; b < drinks.size(); b++) {
-    juiceP += drinks[b];
-  }
-
-  res = ((double)juiceP / (double)overall) * 100;
-  cout << res << "\n";
-
   return 0;
 }
