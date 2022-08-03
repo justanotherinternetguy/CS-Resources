@@ -14,25 +14,18 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	
-	long long n1;
-	long long n2;
-
+	string n1, n2;
 	cin >> n1;
 	cin >> n2;
-	string str_n1 = to_string(n1);
-	string str_n2 = to_string(n2);
-	string res = "";
 
-	for (int i = 0; i < str_n1.size(); i++) {
-		if (str_n1[i] == str_n2[i]) {
-			res += "0";
+	for (size_t i = 0; i < n1.size(); ++i) {
+		if (n1[i] == n2[i]) {
+			n1[i] = '0';
 		} else {
-			res += "1";
+			n1[i] = '1';
 		}
 	}
-
-	int result = stoi(res);
-	cout << result << '\n';
+	cout << n1 << '\n';
 
 	return 0;
 }
