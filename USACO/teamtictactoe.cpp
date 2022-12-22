@@ -64,9 +64,6 @@ int main() {
     }
     cout << individual_wins << '\n';
     cout << team_wins << '\n';
-    
-
-    
 
   return 0;
 }
