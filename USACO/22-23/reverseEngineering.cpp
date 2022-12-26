@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 using ll = long long;
 using u64 = unsigned long long;
 using u32 = unsigned;
@@ -11,10 +12,14 @@ using pi = pair<int,int>;
 #define f first
 #define s second
 #define mp make_pair
-#define mt make_tuple
-
 const int INF = 1e9;
 
 int main() {
-    return 0;
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int t;
+	cin >> t;
+
+	return 0;
 }
