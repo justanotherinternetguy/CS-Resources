@@ -16,5 +16,17 @@ using pi = pair<int,int>;
 const int INF = 1e9;
 
 int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("measurement.in", "r", stdin);
+	freopen("measurement.out", "w", stdout);
+
+
+    int a, b, c, d;
+    cin >> a >> b;
+    cin >> c >> d;
+
+
+
     return 0;
 }
