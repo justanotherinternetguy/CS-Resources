@@ -7,7 +7,7 @@ using vi = vector<int>;
 #define pb push_back
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
-using pi = pair<int,int>;
+using pi = pair<int, int>;
 #define f first
 #define s second
 #define mp make_pair
@@ -16,17 +16,18 @@ using pi = pair<int,int>;
 const int INF = 1e9;
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	freopen("measurement.in", "r", stdin);
-	freopen("measurement.out", "w", stdout);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  freopen("paint.in", "r", stdin);
+  freopen("paint.out", "w", stdout);
 
+  int a, b, c, d;
+  cin >> a >> b;
+  cin >> c >> d;
 
-    int a, b, c, d;
-    cin >> a >> b;
-    cin >> c >> d;
+  // (b - a) + (d - c) - intersection between ([a, b] and [c, d])
 
+  cout << ((b - a) + (d - c)) - max(min(b, d) - max(a, c), 0) << '\n';
 
-
-    return 0;
+  return 0;
 }
