@@ -7,6 +7,7 @@ public class Diff {
             String A, B, res;
             A = sc.next();
             B = sc.next();
+      sysout("TESTING");
         }
     }
 }
