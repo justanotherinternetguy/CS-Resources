@@ -1,57 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int INF = 1e9;
-
-void display(set<pair<int, int>> s) {
-	for (auto x : s) {
-		cout << x.first << ", " << x.second << '\n';
-	}
-}
 
 int main() {
-	// freopen("mowing.in", "r", stdin);
-	// freopen("mowing.out", "w", stdout);
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
+  freopen("mowing.in", "r", stdin);
+  freopen("mowing.out", "w", stdout);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
 
-	int n, t;
-	cin >> n;
-	t = 0;
-	pair<int, int> coord;
-	coord = make_pair(0, 0);
-	set<pair<int, int>> s;
+  // figure out the largest period of time that exists such that Farmer John never mows the same square of grass twice within the given time
+  // FJ will mow at most 1k squares of grass,
+  // just keep track of the last point in time when Farmer John moved the grass in the given square
 
-	int res = 0;
+  int n;
+  cin >> n;
+  int x = 0;
+  int y = 0;
+  int t = 0;
+  map<pair<int, int>, int> mp;
+  int ans = 1e9;
 
-	for (int i = 0; i < n; i++) {
-		char dir;
-		int cnt;
-		cin >> dir >> cnt;
-		for (int j = 0; j < cnt; j++) {
-			if (dir == 'N') {
-				coord.second++;
-			}
-			
-			if (dir == 'S') {
-				coord.second--;
-			}
+  for (int i = 0; i < n; i++) {
+    string dir;
+    int dist;
+    cin >> dir >> dist;
 
-			if (dir == 'E') {
-				coord.first++;
-			}
+    for (int j = 0; j < dist; j++) {
+      t++;
+      if (dir == "N") y++;
+      else if (dir == "S") y--;
+      else if (dir == "E") x++;
+      else x--;
+      if (mp.count({x, y}) == 1) {
+	ans = min(ans, t-mp[{x, y}]);
+      }
+      mp[{x, y}] = t;
+    }
+  }
 
-			if (dir == 'W') {
-				coord.first--;
-			}
-			t++;
-			s.insert(coord);
-			if (s.size() != t) {
-				cout << "something wrong" << '\n';
-			}
-		}
-		// display(s);
-	}
-
-	return 0;
+  cout << (ans == 1e9 ? -1 : ans) << '\n';
+  
+  
+  return 0;
 }
