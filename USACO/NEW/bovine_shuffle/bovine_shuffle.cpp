@@ -1,37 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// If the ith cow moves to a_i after one shuffle, then the cow at a_i was at i one shuffle ago
+
 int main() {
-  freopen("./shuffle.in", "r", stdin);
-	freopen("./shuffle.out", "w", stdout);
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  
-  int n;
-  cin >> n;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    freopen("./shuffle.in", "r", stdin);
+    freopen("./shuffle.out", "w", stdout);
 
-  vector<int> shuffle(n);
-  for (int &i: shuffle) {
-    cin >> i;
-  }
+    int n;
+    cin >> n;
 
-  vector<int> ids(n);
-  for (int &i : ids) {
-    cin >> i;
-  }
-
-  for (int i = 0; i < 3; i++) {
-    vector<int> past_order(n);
-    for (int j = 0; j < n; j++) {
-      past_order[j] = ids[shuffle[j] - 1];
+    vector<int> shuffle;
+    for (int i = 0; i < n; i++) {
+        int t;
+        cin >> t;
+        shuffle.push_back(t);
     }
-    ids = past_order;
-  }
 
-  for (int &i : ids) {
-    cout << i << '\n';
-  }
+    vector<int> ids;
+    for (int i = 0; i < n; i++) {
+        int t;
+        cin >> t;
+        ids.push_back(t);
+    }
 
+    for (int i = 0; i < 3; i++) {
+        vector<int> past_order(n);
+        for (int j = 0; j < n; j++) {
+            past_order[j] = ids[shuffle[j]+1];
+        }
+        ids = past_order;
+    }
 
-  return 0;
+    for (auto i : ids) {
+        cout << i << '\n';
+    }
+
+    return 0;
 }
